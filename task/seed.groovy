@@ -1,5 +1,5 @@
 base_path = "final-task"
-job_path = "${base_path}"
+job_path = "${base_path}/task"
 folder("${base_path}")
 
 pipelineJob(job_path) {
@@ -12,12 +12,11 @@ pipelineJob(job_path) {
             name ('Installing_K8s')
             defaultValue('')
             description('K8 to be installed')
-            trim(true)
         }
     }
     definition {
         cps {
-            script(readFileFromWorkspace("${job_path}/task/Jenkinsfile"))
+            script(readFileFromWorkspace("${job_path}/Jenkinsfile"))
             sandbox(false)
         }
     }
