@@ -5,7 +5,7 @@ folder("${base_path}")
 pipelineJob(job_path) {
     description("This job create a new pipeline job which installs K8's in azure VM")
     logRotator {
-        daysToKeep(30)
+        daysToKeep(90)
     }
     parameters {
         stringParam {

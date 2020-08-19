@@ -4,6 +4,8 @@ pipeline {
         stage('Build') {
             steps {
                 sh '''
+                    git clone https://github.com/saivinay98/terraform-task.git
+                    cd terraform-task
                     terraform init
                     terraform plan
                     terraform apply
