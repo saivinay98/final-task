@@ -17,7 +17,7 @@ pipelineJob(job_path) {
     }
     definition {
         cps {
-            script(readFileFromWorkspace("${job_path}/Jenkinsfile"))
+            script(readFileFromWorkspace("${job_path}/task/Jenkinsfile"))
             sandbox(false)
         }
     }
