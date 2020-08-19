@@ -9,7 +9,7 @@ pipelineJob(job_path) {
     }
     parameters {
         stringParam {
-            name ('Install_K8s')
+            name ('Installing_K8s')
             defaultValue('')
             description('K8 to be installed')
             trim(true)
