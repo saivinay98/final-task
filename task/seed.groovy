@@ -12,6 +12,7 @@ pipelineJob(job_path) {
             name ('Installing_K8s')
             defaultValue('')
             description('K8 to be installed')
+	    trim(true)
         }
     }
     definition {
