@@ -7,14 +7,6 @@ pipelineJob(job_path) {
     logRotator {
         daysToKeep(90)
     }
-    parameters {
-        stringParam {
-            name ('Installing_K8s')
-            defaultValue('')
-            description('K8s to be installed')
-	    trim(true)
-        }
-    }
     definition {
         cps {
             script(readFileFromWorkspace("${job_path}/Jenkinsfile"))
