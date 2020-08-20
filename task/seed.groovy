@@ -5,7 +5,7 @@ folder("${base_path}")
 pipelineJob(job_path) {
     description("This job create a new pipeline job which installs K8's in azure VM")
     logRotator {
-        daysToKeep(90)
+        daysToKeep(60)
     }
     definition {
         cps {
